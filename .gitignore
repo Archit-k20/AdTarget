@@ -1,0 +1,24 @@
+# ===== Node / React =====
+frontend/node_modules/
+frontend/build/
+frontend/.env
+frontend/.DS_Store
+
+# ===== Java / Spring Boot =====
+backend/target/
+backend/.classpath
+backend/.project
+backend/.settings/
+backend/.idea/
+backend/*.iml
+backend/.DS_Store
+
+# ===== Heavy Uploads =====
+backend/uploads/
+
+# ===== Misc =====
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/
