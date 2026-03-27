@@ -42,31 +42,32 @@ Follow these steps to get a local development environment up and running.
 ### Prerequisites
 * **Docker Desktop** (Make sure the Docker engine is running)
 * **Java 17+** * **Node.js 18+** ### 1. Clone the repository
-```bash
+
+
 2. Start the Infrastructure (Database & Storage)
 The project includes a docker-compose.yml file that spins up both MySQL and MinIO with pre-configured health checks and persistent volumes.
 
-Bash
+```Bash
 docker-compose up -d
 Note: MinIO is accessible at http://localhost:9001 (Username: minioadmin / Password: minioadmin). The backend automatically creates the adtarget-bucket and configures public read policies on startup.
-
+```
 3. Start the Spring Boot Backend
 Navigate to the backend directory and run the Spring Boot application using the Maven wrapper.
 
-Bash
+```Bash
 cd backend
 ./mvnw clean spring-boot:run
 The backend will start on http://localhost:8081.
-
+```
 4. Start the React Frontend
 Open a new terminal window, navigate to the frontend directory, install the dependencies, and start the development server.
 
-Bash
+```Bash
 cd frontend
 npm install
 npm start
 The frontend will start on http://localhost:3000.
-
+```
 📡 API Overview
 The backend exposes a secure REST API. Swagger/OpenAPI documentation is available (when the backend is running) at:
 👉 http://localhost:8081/swagger-ui.html
@@ -85,14 +86,6 @@ POST /api/ads - Create a new ad with a multipart image (Protected)
 
 GET /api/users/me - Fetch logged-in user's profile and stats (Protected)
 
-📸 Screenshots
-(Add screenshots of your application here!)
-
-Screenshot 1: The Ad creation form with drag-and-drop.
-
-Screenshot 2: The "All Ads" grid view.
-
-Screenshot 3: The User Profile statistics page.
 
 🛡️ License
 This project is licensed under the MIT License - see the LICENSE file for details.
@@ -110,3 +103,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
    git push origin main
 git clone [https://github.com/YOUR_USERNAME/AdTargetPro.git](https://github.com/YOUR_USERNAME/AdTargetPro.git)
 cd AdTargetPro
+```
